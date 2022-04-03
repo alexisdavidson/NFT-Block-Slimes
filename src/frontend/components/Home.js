@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { ethers } from "ethers"
 import { Row, Col, Card, Button } from 'react-bootstrap'
+import slime from './images/slime.png'
 
 const Home = ({ marketplace, nft }) => {
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [items, setItems] = useState([])
     const loadMarketplaceItems = async () => {
         // Load all unsold items
@@ -50,38 +51,55 @@ const Home = ({ marketplace, nft }) => {
     )
 
     return (
-        <div className="flex justify-center">
-            {items.length > 0 ?
-                <div className="px-5 container">
-                    <Row xs={1} md={2} lg={4} className="g-4 py-5">
-                        {items.map((item, idx) => (
-                            <Col key={idx} className="overflow-hidden">
-                                <Card>
-                                    <Card.Img variant="top" src={item.image} />
-                                    <Card.Body color="secondary">
-                                    <Card.Title>{item.name}</Card.Title>
-                                    <Card.Text>
-                                        {item.description}
-                                    </Card.Text>
-                                    </Card.Body>
-                                    <Card.Footer>
-                                    <div className='d-grid'>
-                                        <Button onClick={() => buyMarketItem(item)} variant="primary" size="lg">
-                                            Buy for {ethers.utils.formatEther(item.totalPrice)} ETH
-                                        </Button>
-                                    </div>
-                                    </Card.Footer>
-                                </Card>
-                            </Col>
-                        ))}
-                    </Row>
+        <section id="top" className="row">
+            <div className="c-2 penguin-top">
+                <div className="cadre load-hidden" data-sr-id="5">
+                    <div className="penguin-img">
+                        <img src={slime} alt="Presentation image" />
+                    </div>
+                    <div className="border">
+                    </div>
                 </div>
-            : (
-                <main style={{ padding: "1rem 0" }}>
-                    <h2>No listed assets</h2>
-                </main>
-            )}
-        </div>
+            </div>
+            <div className="c-2 description text-light">
+                <h1 data-sr-id="6">Block Slimes</h1>
+                <p className="load-hidden" data-sr-id="7">
+                    100 unique collectible Slimes with proof of ownership stored on the Ethereum blockchain. Featured on New York Times, CNBC, and Bloomberg. Block Slimes are "Non-Fungible Tokens" on Ethereum, and each Block Slime was created as an ERC-721 standard token, that powers most digital art and collectibles.
+                </p>
+            </div>
+        </section>
+        // <div className="flex justify-center">
+        //     {items.length > 0 ?
+        //         <div className="px-5 container">
+        //             <Row xs={1} md={2} lg={4} className="g-4 py-5">
+        //                 {items.map((item, idx) => (
+        //                     <Col key={idx} className="overflow-hidden">
+        //                         <Card>
+        //                             <Card.Img variant="top" src={item.image} />
+        //                             <Card.Body color="secondary">
+        //                             <Card.Title>{item.name}</Card.Title>
+        //                             <Card.Text>
+        //                                 {item.description}
+        //                             </Card.Text>
+        //                             </Card.Body>
+        //                             <Card.Footer>
+        //                             <div className='d-grid'>
+        //                                 <Button onClick={() => buyMarketItem(item)} variant="primary" size="lg">
+        //                                     Buy for {ethers.utils.formatEther(item.totalPrice)} ETH
+        //                                 </Button>
+        //                             </div>
+        //                             </Card.Footer>
+        //                         </Card>
+        //                     </Col>
+        //                 ))}
+        //             </Row>
+        //         </div>
+        //     : (
+        //         <main style={{ padding: "1rem 0" }}>
+        //             <h2>No listed assets</h2>
+        //         </main>
+        //     )}
+        // </div>
     );
 }
 export default Home

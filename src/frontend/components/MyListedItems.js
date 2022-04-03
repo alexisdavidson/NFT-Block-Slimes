@@ -23,7 +23,7 @@ function renderSoldItems(items) {
 }
 
 export default function MyListedItems({ marketplace, nft, account }) {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [listedItems, setListedItems] = useState([])
   const [soldItems, setSoldItems] = useState([])
   const loadListedItems = async () => {

@@ -3,7 +3,7 @@ import {
   Routes,
   Route
 } from "react-router-dom"
-import logo from './logo.png';
+import logo from './images/logo.png';
 import './App.css';
 import Navigation from './Navbar';
 import Home from './Home';
@@ -13,7 +13,7 @@ import MyListedItems from './MyListedItems';
 
 import { useState } from 'react'
 import { ethers } from 'ethers'
-import { Spinner } from 'react-bootstrap'
+import { Container, Spinner } from 'react-bootstrap'
 
 import MarketplaceAbi from '../contractsData/Marketplace.json'
 import MarketplaceAddress from '../contractsData/Marketplace-address.json'
@@ -21,7 +21,7 @@ import NFTAbi from '../contractsData/NFT.json'
 import NFTAddress from '../contractsData/NFT-address.json'
  
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [account, setAccount] = useState(null)
   const [nft, setNFT] = useState({})
   const [marketplace, setMarketplace] = useState({})
@@ -48,28 +48,35 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navigation web3Handler={web3Handler} account={account} />
-        { loading ? (
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh'}}>
-            <Spinner animation="border" style={{ display: 'flex' }} />
-            <p className='mx-3 my-0'>Awaiting MetaMask Connection...</p>
-          </div>
-        ) : (
-          <Routes>
-            <Route path="/" element={
-              <Home marketplace={marketplace} nft={nft}/>
-            } />
-            <Route path="/create" element={
-              <Create marketplace={marketplace} nft={nft}/>
-            } />
-            <Route path="/my-listed-items" element={
-              <MyListedItems marketplace={marketplace} nft={nft} account={account}/>
-            } />
-            <Route path="/my-purchases" element={
-              <MyPurchases marketplace={marketplace} nft={nft} account={account}/>
-            } />
-          </Routes>
-        ) }
+        <Container fluid style={{
+          backgroundColor: "#090f25"
+        }}>
+          <Navigation web3Handler={web3Handler} account={account} />
+          { loading ? (
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh'}}>
+              <Spinner animation="border" style={{ display: 'flex' }} />
+              <p className='mx-3 my-0'>Awaiting MetaMask Connection...</p>
+            </div>
+          ) : (
+            <Routes>
+              <Route path="/" element={
+                <Home marketplace={marketplace} nft={nft}/>
+              } />
+              <Route path="/about" element={
+                <Create marketplace={marketplace} nft={nft}/>
+              } />
+              <Route path="/best-moments" element={
+                <MyListedItems marketplace={marketplace} nft={nft} account={account}/>
+              } />
+              <Route path="/family" element={
+                <MyPurchases marketplace={marketplace} nft={nft} account={account}/>
+              } />
+              <Route path="/faq" element={
+                <MyPurchases marketplace={marketplace} nft={nft} account={account}/>
+              } />
+            </Routes>
+          ) }
+        </Container>
       </div>
     </BrowserRouter>
   );
