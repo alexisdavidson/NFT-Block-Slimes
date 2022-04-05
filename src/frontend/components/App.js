@@ -10,10 +10,11 @@ import About from './About';
 import Family from './Family';
 import BestMoments from './BestMoments';
 import Faq from './Faq';
+import Footer from './Footer';
 
 import { useState } from 'react'
 import { ethers } from 'ethers'
-import { Container, Spinner } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 import MarketplaceAbi from '../contractsData/Marketplace.json'
 import MarketplaceAddress from '../contractsData/Marketplace-address.json'
@@ -50,14 +51,25 @@ function App() {
       <div className="App" style={{
         backgroundColor: "#090f25"
       }}>
-        <Container fulid="sm" className="px-3 py-3">
-          <Navigation web3Handler={web3Handler} account={account} />
-          <Top />
-          <About />
-          <BestMoments />
-          <Family />
-          <Faq />
+        <Container fluid="sm" className="pt-3">
+          <Row>
+            <Col>
+              <Navigation web3Handler={web3Handler} account={account} />
+              <Top />
+              {/* <About />
+              <BestMoments />
+              <Family />
+              <Faq /> */}
+            </Col>
+          </Row>
         </Container>
+        <div style={{
+          backgroundColor: "#0d1730"
+        }}>
+          <Container fluid="sm" className=" px-3 pt-3">
+            <Footer />
+          </Container>
+        </div>
       </div>
     </BrowserRouter>
   );

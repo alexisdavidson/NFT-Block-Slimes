@@ -22,13 +22,14 @@ const Navigation = ({ web3Handler, account }) => {
                 <Col className="d-none d-md-block col-5 text-light">
                         <div className="d-flex align-items-start" style={{
                             whiteSpace: "nowrap",
-                            textOverflow: "ellipsis"
+                            textOverflow: "ellipsis",
+                            color: "#80d554"
                         }}>
-                            <Nav.Link as={Link} to="/">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/about">About</Nav.Link>
-                            <Nav.Link as={Link} to="/best-moments">Best Moments</Nav.Link>
-                            <Nav.Link as={Link} to="/family">Family</Nav.Link>
-                            <Nav.Link as={Link} to="/faq">FAQ</Nav.Link>
+                            <Nav.Link as={Link} to="/" style={{ color: "#579c32", fontWeight: "bold" }}>Home</Nav.Link>
+                            <Nav.Link as={Link} to="/about" style={{ color: "#80d554", fontWeight: "bold"  }}>About</Nav.Link>
+                            <Nav.Link as={Link} to="/best-moments" style={{ color: "#80d554", fontWeight: "bold"  }}>Best Moments</Nav.Link>
+                            <Nav.Link as={Link} to="/family" style={{ color: "#80d554", fontWeight: "bold"  }}>Family</Nav.Link>
+                            <Nav.Link as={Link} to="/faq" style={{ color: "#80d554", fontWeight: "bold"  }}>FAQ</Nav.Link>
                         </div>
                 </Col>
                 <Col className="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
