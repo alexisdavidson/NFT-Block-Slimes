@@ -4,7 +4,7 @@ import { Image, Row, Col, Card, Button } from 'react-bootstrap'
 import slime from './images/slime.png'
 import logo from './images/logo.png'
 
-const Home = ({ marketplace, nft }) => {
+const Top = ({ marketplace, nft }) => {
     const [loading, setLoading] = useState(false)
     const [items, setItems] = useState([])
     const loadMarketplaceItems = async () => {
@@ -54,11 +54,7 @@ const Home = ({ marketplace, nft }) => {
     return (
         <Row className="my-5 p-3">
             <Col>
-                <div className="load-hidden" data-sr-id="5">
-                    <div>
-                        <img src={slime} alt="Presentation image" />
-                    </div>
-                </div>
+                <img src={slime} alt="Presentation image" className="rounded"/>
             </Col>
             <Col className="text-light">
                 <Row className="my-4">
@@ -67,7 +63,7 @@ const Home = ({ marketplace, nft }) => {
                     }}/>
                 </Row>
                 <Row className="my-5">
-                    <p className="load-hidden" style={{
+                    <p style={{
                         textAlign: "left",
                         fontSize: "20px"
                     }}>
@@ -110,4 +106,4 @@ const Home = ({ marketplace, nft }) => {
         // </div>
     );
 }
-export default Home
+export default Top

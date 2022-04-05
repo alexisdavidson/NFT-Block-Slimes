@@ -3,13 +3,13 @@ import {
   Routes,
   Route
 } from "react-router-dom"
-import logo from './images/logo.png';
 import './App.css';
 import Navigation from './Navbar';
-import Home from './Home';
-import Create from './Create';
-import MyPurchases from './MyPurchases';
-import MyListedItems from './MyListedItems';
+import Top from './Top';
+import About from './About';
+import Family from './Family';
+import BestMoments from './BestMoments';
+import Faq from './Faq';
 
 import { useState } from 'react'
 import { ethers } from 'ethers'
@@ -52,30 +52,11 @@ function App() {
       }}>
         <Container fulid="sm" className="px-3 py-3">
           <Navigation web3Handler={web3Handler} account={account} />
-          { loading ? (
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh'}}>
-              <Spinner animation="border" style={{ display: 'flex' }} />
-              <p className='mx-3 my-0'>Awaiting MetaMask Connection...</p>
-            </div>
-          ) : (
-            <Routes>
-              <Route path="/" element={
-                <Home marketplace={marketplace} nft={nft}/>
-              } />
-              <Route path="/about" element={
-                <Create marketplace={marketplace} nft={nft}/>
-              } />
-              <Route path="/best-moments" element={
-                <MyListedItems marketplace={marketplace} nft={nft} account={account}/>
-              } />
-              <Route path="/family" element={
-                <MyPurchases marketplace={marketplace} nft={nft} account={account}/>
-              } />
-              <Route path="/faq" element={
-                <MyPurchases marketplace={marketplace} nft={nft} account={account}/>
-              } />
-            </Routes>
-          ) }
+          <Top />
+          <About />
+          <BestMoments />
+          <Family />
+          <Faq />
         </Container>
       </div>
     </BrowserRouter>
