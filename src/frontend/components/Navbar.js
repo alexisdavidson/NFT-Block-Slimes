@@ -2,7 +2,7 @@ import {
     Link
 } from "react-router-dom";
 
-import { Image, Row, Col, Navbar, Nav, Button, Container } from 'react-bootstrap'
+import { Image, Row, Col, Nav, Button } from 'react-bootstrap'
 import icon_di from './images/icon_di.png'
 import icon_tw from './images/icon_tw.png'
 import icon_os from './images/opensea.png'
@@ -10,16 +10,14 @@ import logo from './images/logo.png'
 
 const Navigation = ({ web3Handler, account }) => {
     return (
-        <Row className="px-4 py-4 mb-3" style={{
-            // backgroundColor: '#07081d'
-        }}>
+        <Row className="px-4 py-4 mb-3">
             <Row className="d-none d-sm-block my-3">
                 <Image src={logo} className="d-flex align-items-start" style={{
                     width: "150px"
                 }}/>
             </Row>
             <Row>
-                <Col className="d-none d-md-block col-5 text-light">
+                <Col className="d-none d-lg-block col-5 text-light">
                         <div className="d-flex align-items-start" style={{
                             whiteSpace: "nowrap",
                             textOverflow: "ellipsis",
@@ -58,7 +56,7 @@ const Navigation = ({ web3Handler, account }) => {
 
                             </Nav.Link>
                         ) : (
-                            <Button onClick={web3Handler} variant="outline-light">Connect Wallet</Button>
+                            <Button onClick={web3Handler} variant="outline-warning">Connect Wallet</Button>
                         )}
                     </div>
                 </Col>

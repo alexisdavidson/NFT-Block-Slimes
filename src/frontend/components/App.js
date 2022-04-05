@@ -11,6 +11,7 @@ import Family from './Family';
 import BestMoments from './BestMoments';
 import Faq from './Faq';
 import Footer from './Footer';
+import Mint from './Mint';
 
 import { useState } from 'react'
 import { ethers } from 'ethers'
@@ -56,6 +57,7 @@ function App() {
             <Col>
               <Navigation web3Handler={web3Handler} account={account} />
               <Top />
+              <Mint web3Handler={web3Handler} account={account} />
               {/* <About />
               <BestMoments />
               <Family />
