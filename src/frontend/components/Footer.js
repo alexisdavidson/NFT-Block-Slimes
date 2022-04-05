@@ -6,11 +6,13 @@ import logo from './images/logo.png'
 
 const Footer = () => {
     return (
-        <Row className="mt-5 p-3">
-            <Col className="mr-5 col-2 mycontent-left">
-                <Row  style={{
+        <Row className="p-3">
+            <Col className="mr-5 col-lg-1 col-12">
+                <Row style={{
                         textAlign: "left",
-                        fontSize: "18px"
+                        fontSize: "18px",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis"
                     }}>
                     <a href="/" style={{ color: "#80d554", fontWeight: "bold", textDecoration: "none" }}>Home</a>
                     <br />
@@ -36,13 +38,15 @@ const Footer = () => {
                     </div>
                 </Row>
             </Col>
+            <Col className="col-1 mycontent-left mr-5 d-none d-lg-block"></Col>
+            <Row className="mt-5 mycontent-top mr-5 d-sm-block d-lg-none"></Row>
             <Col className="ml-5 text-light">
                 <Row className="my-4">
                     <Image src={logo} className="d-flex align-items-start" style={{
                         width: "250px"
                     }}/>
                 </Row>
-                <Row className="my-5">
+                <Row className="mt-5">
                     <p style={{
                         textAlign: "left",
                         fontSize: "18px",

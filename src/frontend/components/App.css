@@ -44,3 +44,6 @@ h2 {
 .mycontent-left {
   border-right: 1px solid #579c32;
 }
+.mycontent-top {
+  border-bottom: 1px solid #579c32;
+}

@@ -56,7 +56,7 @@ const Top = ({ marketplace, nft }) => {
             <Row className="my-5 p-3">
                 <Col>
                     <img src={slime} alt="Presentation image" className="rounded" style={{
-                            border: "2px solid #89e458"
+                            border: "20px solid #0d1730"
                         }}/>
                 </Col>
                 <Col className="text-light">
@@ -75,7 +75,7 @@ const Top = ({ marketplace, nft }) => {
                     </Row>
                 </Col>
             </Row>
-            <Row className="my-5 p-3 text-light" style={{
+            {/* <Row className="my-5 p-3 text-light" style={{
                             fontSize: "25px"
             }}>
                 <Col className="col-3">
@@ -110,7 +110,7 @@ const Top = ({ marketplace, nft }) => {
                         <h2>51,316 ETH</h2>
                     </div>
                 </Col>
-            </Row>
+            </Row> */}
         </Row>
         // <div className="flex justify-center">
         //     {items.length > 0 ?
