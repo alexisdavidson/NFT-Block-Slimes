@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { ethers } from "ethers"
-import { Row, Col, Card, Button } from 'react-bootstrap'
+import { Image, Row, Col, Card, Button } from 'react-bootstrap'
 import slime from './images/slime.png'
+import logo from './images/logo.png'
 
 const Home = ({ marketplace, nft }) => {
     const [loading, setLoading] = useState(false)
@@ -51,23 +52,30 @@ const Home = ({ marketplace, nft }) => {
     )
 
     return (
-        <section id="top" className="row">
-            <div className="c-2 penguin-top">
-                <div className="cadre load-hidden" data-sr-id="5">
-                    <div className="penguin-img">
+        <Row className="my-5 p-3">
+            <Col>
+                <div className="load-hidden" data-sr-id="5">
+                    <div>
                         <img src={slime} alt="Presentation image" />
                     </div>
-                    <div className="border">
-                    </div>
                 </div>
-            </div>
-            <div className="c-2 description text-light">
-                <h1 data-sr-id="6">Block Slimes</h1>
-                <p className="load-hidden" data-sr-id="7">
-                    100 unique collectible Slimes with proof of ownership stored on the Ethereum blockchain. Featured on New York Times, CNBC, and Bloomberg. Block Slimes are "Non-Fungible Tokens" on Ethereum, and each Block Slime was created as an ERC-721 standard token, that powers most digital art and collectibles.
-                </p>
-            </div>
-        </section>
+            </Col>
+            <Col className="text-light">
+                <Row className="my-4">
+                    <Image src={logo} className="d-flex align-items-start" style={{
+                        width: "300px"
+                    }}/>
+                </Row>
+                <Row className="my-5">
+                    <p className="load-hidden" style={{
+                        textAlign: "left",
+                        fontSize: "20px"
+                    }}>
+                        100 unique collectible Slimes with proof of ownership stored on the Ethereum blockchain. Featured on New York Times, CNBC, and Bloomberg. Block Slimes are "Non-Fungible Tokens" on Ethereum, and each Block Slime was created as an ERC-721 standard token, that powers most digital art and collectibles.
+                    </p>
+                </Row>
+            </Col>
+        </Row>
         // <div className="flex justify-center">
         //     {items.length > 0 ?
         //         <div className="px-5 container">

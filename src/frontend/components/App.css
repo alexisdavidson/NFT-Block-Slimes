@@ -37,30 +37,6 @@
   }
 }
 
-header .header-left {
-  display: flex;
-  flex-direction: column;
-}
-
-header .header-right {
-  display: flex;
-  align-items: flex-end;
-}
-
-#top .penguin-top {
-  padding: 0;
-  align-items: center;
-}
-
-#top .penguin-top {
-  display: flex;
-  justify-content: center;
-}
-
-.row .c-2 {
-  width: calc(50% - 20px);
-}
-
 #top .description {
   display: flex;
   flex-direction: column;

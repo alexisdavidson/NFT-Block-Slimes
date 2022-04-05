@@ -47,10 +47,10 @@ function App() {
   }
   return (
     <BrowserRouter>
-      <div className="App">
-        <Container fluid style={{
-          backgroundColor: "#090f25"
-        }}>
+      <div className="App" style={{
+        backgroundColor: "#090f25"
+      }}>
+        <Container fulid="sm" className="px-3 py-3">
           <Navigation web3Handler={web3Handler} account={account} />
           { loading ? (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh'}}>
