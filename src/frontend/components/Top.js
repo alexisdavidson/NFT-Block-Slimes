@@ -1,5 +1,5 @@
 import { Image, Row, Col } from 'react-bootstrap'
-import slime from './images/slime.png'
+import slimes from './images/slimes.gif'
 import logo from './images/logo.png'
 
 const Top = () => {
@@ -7,7 +7,7 @@ const Top = () => {
         <Row>
             <Row className="mt-5 p-3">
                 <Col className="col-12 col-lg-6">
-                    <img src={slime} alt="Presentation image" className="rounded" style={{
+                    <img src={slimes} alt="Presentation image" className="rounded" style={{
                             border: "20px solid #0d1730"
                         }}/>
                 </Col>
