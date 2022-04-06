@@ -54,7 +54,7 @@ const Mint = ({ web3Handler, account, marketplace, nft }) => {
     return (
         <Row>
             <Row className="p-3 text-light g-0">
-                <h1 className="mb-5">PUBLIC MINT</h1>
+                <h1 className="mb-5" id="mint">PUBLIC MINT</h1>
                 <div style={{
                     textAlign: "center"
                 }}>

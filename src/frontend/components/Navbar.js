@@ -23,11 +23,13 @@ const Navigation = ({ web3Handler, account }) => {
                             textOverflow: "ellipsis",
                             color: "#80d554"
                         }}>
-                            <Nav.Link as={Link} to="/" style={{ color: "#579c32", fontWeight: "bold" }}>Home</Nav.Link>
-                            <Nav.Link as={Link} to="/about" style={{ color: "#80d554", fontWeight: "bold"  }}>About</Nav.Link>
+                            <a href="/" style={{ color: "#579c32", fontWeight: "bold", textDecoration: "none", paddingRight: "15px" }}>Home</a>
+                            <a href="#mint" style={{ color: "#80d554", fontWeight: "bold", textDecoration: "none", paddingRight: "15px" }}>Mint</a>
+                            
+                            {/* <Nav.Link as={Link} to="/about" style={{ color: "#80d554", fontWeight: "bold"  }}>About</Nav.Link>
                             <Nav.Link as={Link} to="/best-moments" style={{ color: "#80d554", fontWeight: "bold"  }}>Best Moments</Nav.Link>
                             <Nav.Link as={Link} to="/family" style={{ color: "#80d554", fontWeight: "bold"  }}>Family</Nav.Link>
-                            <Nav.Link as={Link} to="/faq" style={{ color: "#80d554", fontWeight: "bold"  }}>FAQ</Nav.Link>
+                            <Nav.Link as={Link} to="/faq" style={{ color: "#80d554", fontWeight: "bold"  }}>FAQ</Nav.Link> */}
                         </div>
                 </Col>
                 <Col className="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
