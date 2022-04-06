@@ -22,7 +22,7 @@ const Top = () => {
                             textAlign: "left",
                             fontSize: "20px"
                         }}>
-                            100 unique collectible Slimes with proof of ownership stored on the Ethereum blockchain. Featured on New York Times, CNBC, and Bloomberg. Block Slimes are "Non-Fungible Tokens" on Ethereum, and each Block Slime was created as an ERC-721 standard token, that powers most digital art and collectibles.
+                            100 unique collectible Slimes with proof of ownership stored on the Ethereum blockchain. Block Slimes are "Non-Fungible Tokens" on Ethereum, and each Block Slime was created as an ERC-721 standard token, that powers most digital art and collectibles.
                         </p>
                     </Row>
                 </Col>
@@ -43,7 +43,7 @@ const Top = () => {
                         background: "#0d1730"
                     }}>
                         <h3>Owners</h3>
-                        <h2>62</h2>
+                        <h2>0</h2>
                     </div>
                 </Col>
                 <Col className="col-12 col-lg-6 col-xl-3 mb-4">
@@ -51,7 +51,7 @@ const Top = () => {
                         background: "#0d1730"
                     }}>
                         <h3>Floor</h3>
-                        <h2>3.475 ETH</h2>
+                        <h2>0.000 ETH</h2>
                     </div>
                 </Col>
                 <Col className="col-12 col-lg-6 col-xl-3 mb-4">
@@ -59,7 +59,7 @@ const Top = () => {
                         background: "#0d1730"
                     }}>
                         <h3>Volume Traded</h3>
-                        <h2>51,316 ETH</h2>
+                        <h2>0.000 ETH</h2>
                     </div>
                 </Col>
             </Row>
