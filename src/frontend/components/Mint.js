@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { ethers } from "ethers"
-import { Image, Row, Col, Card, Button } from 'react-bootstrap'
+import { Image, Row, Col, Card, Button, Badge } from 'react-bootstrap'
 import slime from './images/slime.png'
 import logo from './images/logo.png'
 
@@ -53,21 +53,44 @@ const Mint = ({ web3Handler, account, marketplace, nft }) => {
 
     return (
         <Row>
-            <Row className="p-3 text-light">
+            <Row className="p-3 text-light g-0">
                 <h1 className="mb-5">PUBLIC MINT</h1>
                 <div style={{
                     textAlign: "center"
                 }}>
                     {account ? (
-                    <a href={`https://etherscan.io/address/${account}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="button nav-button btn-sm mx-4">
-                        <Button variant="outline-light">
-                            {account.slice(0, 5) + '...' + account.slice(38, 42)}
-                        </Button>
-
-                    </a>
+                    <Row className="g-0">
+                        <Row className="g-0">
+                            <a href={`https://etherscan.io/address/${account}`}
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <Badge pill bg="light" className="btn-lg pt-3" text="dark" style={{
+                                    minWidth:"300px"
+                                }}>
+                                    <p style={{
+                                        fontSize: "35px"
+                                    }}>Buy</p>
+                                    <p style={{
+                                        fontSize: "20px"
+                                    }}>0.06 ETH</p>
+                                </Badge>
+                            </a>
+                        </Row>
+                        <Row className="mt-3 g-0">
+                            <p>Click buy to mint your NFT.</p>
+                        </Row>
+                        <Row className="mt-5 g-0">
+                            <p style={{
+                                fontSize: "18px"
+                            }}>Total Minted</p>
+                        </Row>
+                        <Row className="g-0">
+                            <a><Badge className="p-3" bg="dark" style={{
+                                minWidth:"200px",
+                                fontSize: "20px"
+                            }}>42 / 100</Badge></a>
+                        </Row>
+                    </Row>
                     ) : (
                         <Button onClick={web3Handler} variant="outline-warning" className="btn-lg" style={{
                             width: "50%"

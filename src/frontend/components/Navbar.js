@@ -45,16 +45,15 @@ const Navigation = ({ web3Handler, account }) => {
                             <Image src={icon_os} width="30" height="30" className="image"/>
                         </a>
                         {account ? (
-                            <Nav.Link
+                            <a
                                 href={`https://etherscan.io/address/${account}`}
                                 target="_blank"
-                                rel="noopener noreferrer"
-                                className="button nav-button btn-sm mx-4">
+                                rel="noopener noreferrer">
                                 <Button variant="outline-light">
                                     {account.slice(0, 5) + '...' + account.slice(38, 42)}
                                 </Button>
 
-                            </Nav.Link>
+                            </a>
                         ) : (
                             <Button onClick={web3Handler} variant="outline-warning">Connect Wallet</Button>
                         )}
