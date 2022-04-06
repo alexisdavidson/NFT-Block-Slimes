@@ -7,7 +7,7 @@ import logo from './images/logo.png'
 const Footer = () => {
     return (
         <Row className="p-3">
-            <Col className="mr-5 col-lg-1 col-12">
+            <Col className="mr-5 col-xl-1 col-12">
                 <Row style={{
                         textAlign: "left",
                         fontSize: "18px",
@@ -38,8 +38,8 @@ const Footer = () => {
                     </div>
                 </Row>
             </Col>
-            <Col className="col-1 mycontent-left mr-5 d-none d-lg-block"></Col>
-            <Row className="mt-5 mycontent-top mr-5 d-sm-block d-lg-none"></Row>
+            <Col className="col-1 mycontent-left mr-5 d-none d-xl-block"></Col>
+            <Row className="mt-5 mycontent-top mr-5 d-sm-block d-xl-none"></Row>
             <Col className="ml-5 text-light">
                 <Row className="my-4">
                     <Image src={logo} className="d-flex align-items-start" style={{
