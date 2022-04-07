@@ -18,7 +18,7 @@ const Footer = () => {
                     <br />
                     <a href="/" style={{ color: "#579c32", textDecoration: "none" }}>Terms & Conditions</a>
                     <br />
-                    <a href="/" style={{ color: "#579c32", textDecoration: "none" }}>Smart Contracts</a>
+                    <a href="https://ropsten.etherscan.io/address/0xcA28f8815adBedDdf1d877130c7f8F5f4d780CCF" style={{ color: "#579c32", textDecoration: "none" }}>Smart Contracts</a>
                 </Row>
                 <Row className="mt-5">
                     <div style={{
